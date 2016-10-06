@@ -8,38 +8,87 @@
 </head>
 <body>
 
-<div class="tabla">
+
     <div class="row s12 contenedor" >
 
-        <table class="bordered responsive-table centered ">
-            <thead>
-            <tr>
-                <th data-field="nombre">Nombre</th>
-                <th data-field="apellido">Apellido</th>
-                <th data-field="ni">Número Documento</th>
-                <th data-field="ni">Fecha de Nacimiento</th>
-            </tr>
-            </thead>
+        <div class="col s11">
+            <table id="tabla" class=" responsive-table centered z-depth-2">
+                <thead>
+                <tr>
+                    <th data-field="nombre">Nombre</th>
+                    <th data-field="apellido">Apellido</th>
+                    <th data-field="ni">Número Documento</th>
+                    <th data-field="ni">Fecha de Nacimiento</th>
+                    <th data-field="ni">Teléfono</th>
 
-            <tbody >
-            <tr>
-                <td >Daniel</td>
-                <td>Cardona</td>
-                <td>1214740436</td>
-                <td>08/10/2016</td>
-            </tr>
-             </tbody>
-        </table>
+                </tr>
+                </thead>
+
+                <tbody class="tbody">
+                <tr class="fila">
+                    <td >
+                        <div class="input-field ">
+                            <!--class="validate"-->
+                            <input id="nombre" type="text" >
+                         </div>
+                    </td>
+                    <td>
+                        <div class="input-field ">
+                            <input id="apellido" type="text" >
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field ">
+                            <input id="documento" type="text">
+                         </div>
+                    </td>
+                    <td>
+                        <div class="input-field ">
+                            <input id="nacimiento" type="text" >
+                        </div>
+                    </td>
+                    <td>
+                        <div class="input-field ">
+                            <input id="telefono" type="text" >
+                        </div>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+
+
+
+
+        </div>
+
+        <div class="col s1 botones z-depth-2">
+
+            <p>Adicionar</p>
+            <span class="icon-add add"></span>
+
+
+            <p>Eliminar</p>
+            <span class="icon-close close"></span>
+
+
+            <p>Ver</p>
+            <span class="icon-edit edit"></span>
+
+            <p>Guardar</p>
+            <span class="icon-save save"></span>
+        </div>
+
 
     </div>
 
-    </div>
+
 
 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-<!--<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>-->
+<script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="registros.js"></script>
 <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
