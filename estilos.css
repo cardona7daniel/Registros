@@ -55,9 +55,17 @@ body{
     background: #c8e6c9;
 }
 
-body .contenedor{
+.contenedor{
     width: 100%;
+
+
 }
+
+.guardar{
+    text-align: center;
+}
+
+
 
 
 
@@ -90,10 +98,33 @@ input[type="text"]{
 .botones{
     text-align: center;
     background-color: #a5d6a7;
+    border-radius: 20px;
+    position: fixed;
+
 }
 
 .botones p{
     color: #607d8b;
     border-top: 1px dashed black;
 }
+
+
+h1{
+    MARGIN-TOP: 0;
+    text-align: center;
+    background-color: #263238 ;
+    color: white;
+    /*border-radius: 20px;*/
+}
+
+.borde{
+    border-bottom: 1px black solid;
+}
+
+.datos{
+    text-align: center;
+}
+
+
+
 

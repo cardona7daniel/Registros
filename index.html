@@ -8,59 +8,12 @@
 </head>
 <body>
 
-
-    <div class="row s12 contenedor" >
-
-        <div class="col s11">
-            <table id="tabla" class=" responsive-table centered z-depth-2">
-                <thead>
-                <tr>
-                    <th data-field="nombre">Nombre</th>
-                    <th data-field="apellido">Apellido</th>
-                    <th data-field="ni">Número Documento</th>
-                    <th data-field="ni">Fecha de Nacimiento</th>
-                    <th data-field="ni">Teléfono</th>
-
-                </tr>
-                </thead>
-
-                <tbody class="tbody">
-                <tr class="fila">
-                    <td >
-                        <div class="input-field ">
-                            <!--class="validate"-->
-                            <input id="nombre" type="text" >
-                         </div>
-                    </td>
-                    <td>
-                        <div class="input-field ">
-                            <input id="apellido" type="text" >
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-field ">
-                            <input id="documento" type="text">
-                         </div>
-                    </td>
-                    <td>
-                        <div class="input-field ">
-                            <input id="nacimiento" type="text" >
-                        </div>
-                    </td>
-                    <td>
-                        <div class="input-field ">
-                            <input id="telefono" type="text" >
-                        </div>
-                    </td>
-
-                </tr>
-                </tbody>
-            </table>
+    <header class="">
+        <h1>REGISTROS</h1>
+    </header>
 
 
-
-
-        </div>
+    <div class="row s12 contenedor container" >
 
         <div class="col s1 botones z-depth-2">
 
@@ -77,8 +30,73 @@
 
             <p>Guardar</p>
             <span class="icon-save save"></span>
+
+            <!--<p>Eliminar</p>-->
+            <!--<span class="icon-save save"></span>-->
+
+
         </div>
 
+        <div class="col s11 push-s1">
+            <!--<h1 class="z-depth-1">REGISTROS</h1>-->
+
+            <table id="tabla" class=" responsive-table centered z-depth-2">
+                <thead id="thead">
+                <tr>
+                    <th data-field="nombre" >Nombre</th>
+                    <th data-field="apellido" >Apellido</th>
+                    <th data-field="ni">Número Documento</th>
+                    <th data-field="nacimiento" >Fecha de Nacimiento</th>
+                    <th data-field="telefono" >Teléfono</th>
+
+                </tr>
+                </thead>
+
+                <tbody class="tbody" >
+                    <tr class="fila">
+                        <td >
+                            <div class="input-field ">
+                                <!--class="validate"-->
+                                <input id="nombre" class="nombre" type="text" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field ">
+                                <input id="apellido" class="apellido" type="text" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field ">
+                                <input id="documento" class="documento" type="text">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field ">
+                                <input id="nacimiento" class="nacimiento" type="text" >
+                            </div>
+                        </td>
+                        <td>
+                            <div class="input-field ">
+                                <input id="telefono" class="telefono" type="text" >
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+</div>
+
+
+    </div>
+
+    <div class="row s12  contenedor container guardar " >
+        <div class="save">
+            <div class="col s4 name  "></div>
+            <div class="col s2 lastname "></div>
+            <div class="col s2 ni "></div>
+            <div class="col s2 nacimiento"></div>
+            <div class="col s2 telefono "></div>
+        </div>
 
     </div>
 
@@ -87,8 +105,9 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
 <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 <script src="registros.js"></script>
 <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
