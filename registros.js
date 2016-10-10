@@ -1,7 +1,7 @@
 /**
  * Created by ldcardona on 6/10/2016.
  */
-var cont=0, i=0;
+var cont=0, i=0, k=1;
 var vector=[];
 var obj={};
 
@@ -25,15 +25,19 @@ $(function () {
     });
 
     // function eliminar() {
-    //     var $eliminar = $("#tabla").find('.fila' );
-    //     $eliminar.remove()
+    //     var $eliminar = $("#tabla").find('.fila' + cont );
+    //     var $eliminarReg=$('.guardar').find('.saveB' + cont);
+    //     $eliminar.remove();
+    //     $eliminarReg.remove();
+    //     cont--;
+    //
     // }
 
-    // function eliminarRegistros(){
-    //     var $eliminarRegistros=$('.guardar .save' );
-    //     $eliminarRegistros.remove();
-    // }
-
+    function eliminarRegistros(){
+        var $eliminarRegistros=$('.guardar .save' );
+        $eliminarRegistros.remove();
+    }
+    //
     // $('.close').on('click', function (ev) {
     //     eliminar();
     //     // eliminarRegistros();
@@ -45,31 +49,36 @@ $(function () {
 
 
         save.on('click', function (ev) {
+            eliminarRegistros();
             for(var j=1; j<=cont; j++) {
                 i++;
+
                 var $nombre=$('.tbody').find('.nombre'+ i).val();
                 var $apellido=$('.tbody').find('.apellido'+ i).val();
                 var $nacimiento=$('.tbody').find('.nacimiento'+ i).val();
                 var $telefono=$('.tbody').find('.telefono'+ i).val();
                 var $ni=$('.tbody').find('.documento'+ i).val();
-                // obj.nombre= $nombre;
-                // obj.apellido= $apellido;
-                // obj.ni= $ni;
-                // obj.nacimiento= $nacimiento;
-                // obj.telefono= $telefono;
-                // vector.push(obj);
-                var datos=guardar
-                    .replace(':nombre:', $nombre)
-                    .replace(':apellido:', $apellido)
-                    .replace(':ni:', $ni)
-                    .replace(':nacimiento:', $nacimiento)
-                    .replace(':telefono:', $telefono)
+                // if($nombre!=""){
+                    obj.nombre= $nombre;
+                    obj.apellido= $apellido;
+                    obj.ni= $ni;
+                    obj.nacimiento= $nacimiento;
+                    obj.telefono= $telefono;
+                    vector.push(obj);
+                    var datos=guardar
+                        .replace(':nombre:', $nombre)
+                        .replace(':apellido:', $apellido)
+                        .replace(':ni:', $ni)
+                        .replace(':nacimiento:', $nacimiento)
+                        .replace(':telefono:', $telefono)
+                        .replace(':eliminar:', cont)
 
-                 var $guardar = $(datos)
-                g.append($guardar.fadeIn(2000));
+                    var $guardar = $(datos)
+                    g.append($guardar.fadeIn(2000));
+                    g.addClass('borde');
+                 }
+            i=0;
 
-                g.addClass('borde');
-            }
         });
 
 
@@ -77,7 +86,7 @@ $(function () {
                         <td >
                             <div class="input-field ">
                                 <!--class="validate"-->
-                                <input id="nombre" class="nombre:nom:" type="text" >
+                                <input id="nombre" class="nombre:nom: " type="text" >
                             </div>
                         </td>
                         <td>
@@ -103,7 +112,7 @@ $(function () {
                     </tr>`;
 
     var guardar =
-        `<div class="save">
+        `<div class="save saveb:eliminar:" >
             <div class="col s3 name  ">:nombre:</div>
             <div class="col s2 lastname ">:apellido:</div>
             <div class="col s2 ni ">:ni:</div>
